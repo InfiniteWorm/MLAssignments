@@ -1,0 +1,124 @@
+net(wd_coef, n_hid, n_iter, learning_rate, momentum_multiplier, do_early_stopping, mini_batch_size)
+
+2.3
+>net(0.1, 7, 10, 0, 0, false, 4)
+training data cost : 2.768381
+
+>net(0, 10, 70, 0.005, 0, false, 4)
+training data cost : 2.303441
+
+>net(0, 10, 70, 0.5, 0, false, 4)
+training data cost : 1.901006
+
+>net(0, 10, 70, 0.002, 0, false, 4)
+training data cost : 2.304283
+>net(0, 10, 70, 0.01, 0, false, 4)
+training data cost : 2.302117
+>net(0, 10, 70, 0.05, 0, false, 4)
+training data cost : 2.292967
+>net(0, 10, 70, 0.2, 0, false, 4)
+training data cost : 2.228969
+>net(0, 10, 70, 1, 0, false, 4)
+training data cost : 1.598844
+>net(0, 10, 70, 5, 0, false, 4)
+training data cost : 2.301322
+>net(0, 10, 70, 20, 0, false, 4)
+training data cost : 2.302585
+
+>net(0, 10, 70, 0.002, 0.9, false, 4)
+training data cost : 2.300135
+>net(0, 10, 70, 0.01, 0.9, false, 4)
+training data cost : 2.284022
+>net(0, 10, 70, 0.05, 0.9, false, 4)
+training data cost : 2.008606
+>net(0, 10, 70, 0.2, 0.9, false, 4)
+training data cost : 1.083429 (best so far)
+>net(0, 10, 70, 1, 0.9, false, 4)
+training data cost : 2.018723
+erratic graphs, goes up after 40+ iteration, then goes down until between 50-th and 60-th iteration, then it goes up again, and goes down again
+>net(0, 10, 70, 5, 0.9, false, 4)
+training data cost : 2.302585
+>net(0, 10, 70, 20, 0.9, false, 4)
+training data cost : 2.302585
+
+2.4
+(a)
+>net(0, 200, 1000, 0.35, 0.9,false, 100)
+validation data cost : 0.430185
+classification error rate on the validation data : 0.087000
+
+(b)
+>>net(0, 200, 1000, 0.35, 0.9,true, 100)
+The cost on the validation data is 0.334505
+The classification error rate on the validation data is 0.095000
+Early stopping: validation cost was lowest after 161 iterations.
+
+(c)
+>>net(10, 200, 1000, 0.35, 0.9,false, 100)
+The cost on the validation data is 182.162460
+The classification cost (i.e. without weight decay) on the validation data is 22.612774
+The classification error rate on the validation data is 0.900000
+
+>>net(1, 200, 1000, 0.35, 0.9,false, 100)
+The cost on the validation data is 2.302585
+The classification cost (i.e. without weight decay) on the validation data is 2.302585
+The classification error rate on the validation data is 0.900000
+
+>>net(0.0001, 200, 1000, 0.35, 0.9,false, 100)
+The cost on the validation data is 0.388301
+The classification cost (i.e. without weight decay) on the validation data is 0.348294
+The classification error rate on the validation data is 0.085000
+
+>>net(0.001, 200, 1000, 0.35, 0.9,false, 100)
+The cost on the validation data is 0.462475
+The classification cost (i.e. without weight decay) on the validation data is 0.287910
+The classification error rate on the validation data is 0.090000
+
+>>net(5, 200, 1000, 0.35, 0.9,false, 100)
+The cost on the validation data is 2.302585
+The classification cost (i.e. without weight decay) on the validation data is 2.302585
+The classification error rate on the validation data is 0.900000
+
+(d)
+>>net(0, 10, 1000, 0.35, 0.9,false, 100)
+The cost on the validation data is 0.421705
+The classification error rate on the validation data is 0.107000
+
+>>net(0, 30, 1000, 0.35, 0.9,false, 100)
+The cost on the validation data is 0.317077
+The classification error rate on the validation data is 0.078000
+
+>>net(0, 100, 1000, 0.35, 0.9,false, 100)
+The cost on the validation data is 0.368593
+The classification error rate on the validation data is 0.082000
+
+>>net(0, 130, 1000, 0.35, 0.9,false, 100)
+The cost on the validation data is 0.397597
+The classification error rate on the validation data is 0.087000
+
+>>net(0, 200, 1000, 0.35, 0.9,false, 100)
+The cost on the validation data is 0.430185
+The classification error rate on the validation data is 0.087000
+
+(e)
+>>net(0, 18, 1000, 0.35, 0.9,true, 100)
+The cost on the validation data is 0.306083
+The classification error rate on the validation data is 0.092000
+
+>>net(0, 37, 1000, 0.35, 0.9,true, 100)
+The cost on the validation data is 0.265165
+The classification error rate on the validation data is 0.081000
+
+>>net(0, 83, 1000, 0.35, 0.9,true, 100)
+The cost on the validation data is 0.311244
+The classification error rate on the validation data is 0.083000
+
+>>net(0, 113, 1000, 0.35, 0.9,true, 100)
+The cost on the validation data is 0.313749
+The classification error rate on the validation data is 0.093000
+
+>>net(0, 236, 1000, 0.35, 0.9,true, 100)
+The cost on the validation data is 0.343841
+The classification error rate on the validation data is 0.095000
+
+(f)
