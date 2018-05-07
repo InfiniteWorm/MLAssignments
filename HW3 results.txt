@@ -10,6 +10,7 @@ training data cost : 2.303441
 >net(0, 10, 70, 0.5, 0, false, 4)
 training data cost : 1.901006
 
+2.3
 >net(0, 10, 70, 0.002, 0, false, 4)
 training data cost : 2.304283
 >net(0, 10, 70, 0.01, 0, false, 4)
@@ -122,3 +123,4 @@ The cost on the validation data is 0.343841
 The classification error rate on the validation data is 0.095000
 
 (f)
+>>net(0.001, 37, 1000, 0.35, 0.9,true, 100)

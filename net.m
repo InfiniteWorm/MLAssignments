@@ -150,6 +150,8 @@ function res = grad(model, data, wd_coefficient)
     d_Ewd_input_to_hid = wd_coefficient * model.input_to_hid;
     d_Ewd_hid_to_class = wd_coefficient * model.hid_to_class;
     
+    %get the dimension of data.inputs
+    %what we want is the number of data cases, which is n here
     [m,n] = size(data.inputs);
     
     %Total Cost
