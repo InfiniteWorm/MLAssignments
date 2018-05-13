@@ -49,8 +49,8 @@ T = t*t'
 H = (Y .* T)
 
 beq = [0]
-Aeq = [1 0 1 0 -1 -1]
+Aeq = [1 1 1 -1 -1 -1]
 lb = [0;0;0;0;0;0]
 
-[w2,fval2] = quadprog(H,f,[],[],t',beq,lb)
+[alpha,fval2] = quadprog(H,f,[],[],Aeq,beq,lb)
 
